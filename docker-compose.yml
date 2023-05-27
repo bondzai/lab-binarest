@@ -5,3 +5,7 @@ services:
     image: honeygain/honeygain
     command: -tou-accept -email thejb.vi@gmail.com -pass e123456789 -device r1
     restart: always
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app
