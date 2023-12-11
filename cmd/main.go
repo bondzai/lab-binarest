@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"log"
-	"time"
 
 	"github.com/bondzai/mqsource/mock"
 	"github.com/bondzai/mqsource/task"
@@ -66,6 +65,5 @@ func publishTasks(ch *amqp.Channel, queueName string, tasks []task.Task) {
 		}
 
 		log.Printf("Task %d published to the queue\n", t.ID)
-		time.Sleep(time.Second)
 	}
 }
